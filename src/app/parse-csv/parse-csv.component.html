@@ -1,0 +1,56 @@
+<div class="mainHeader">
+    <header>Enter CSV file to view on Angular Material Table</header>
+
+</div>
+<div class="Uploadheader">
+    <input type="file" #csvReader name="Upload CSV" id="txtFileUpload" (change)="uploadListener($event)" accept=".csv" />    
+</div>
+
+    <mat-form-field class="filter">
+        <mat-label>Search Keyword</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Please Enter text" #input>
+      </mat-form-field>
+
+<div class="mat-elevation-z8 data-table">
+<mat-table class="lessons-table mat-elevation-z8 " [dataSource]="dataSource" matSort aria-label="Elements" >
+  
+    <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Id</mat-header-cell>
+        <mat-cell *matCellDef="let record">{{record.id}}</mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="firstName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>FirstName</mat-header-cell>
+        <mat-cell *matCellDef="let record">{{record.firstName}}</mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="lastName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>LastName</mat-header-cell>
+        <mat-cell *matCellDef="let record">{{record.lastName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="age">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Age</mat-header-cell>
+        <mat-cell *matCellDef="let record">{{record.age}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="position">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Position</mat-header-cell>
+        <mat-cell *matCellDef="let record">{{record.position}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="mobile">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Mobile</mat-header-cell>
+        <mat-cell *matCellDef="let record">{{record.mobile}}</mat-cell>
+    </ng-container>
+    
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    
+</mat-table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
+
+    <div class="page-footer">© 2020 Copyright:
+        <span>Page created by Anand Bhatt</span>
+       </div>
+

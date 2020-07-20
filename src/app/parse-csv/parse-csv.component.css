@@ -1,0 +1,36 @@
+.mainHeader{
+    width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background-color: skyblue;
+  margin-top: 5px;
+  font-size: 30px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.Uploadheader {
+    width: 40%;
+  padding: 20px 0;
+  text-align: center;
+  background-color:lightcyan;
+  margin:10px auto;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.filter {
+    text-align: center;
+    width: 100%;
+    margin:20px auto;
+    border: -5px;
+}
+.data-table {
+    width: 50%;
+    margin:20px auto;
+  }
+.page-footer{
+    position: fixed;
+    bottom: 0px;
+   text-align: left;
+   font-size: 15px;
+}

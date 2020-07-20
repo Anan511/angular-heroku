@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/7d8386db-a017-452e-851f-fd59e1bbfd11/resourceGroups/learnAppDeploy/providers/Microsoft.Web/sites/learnAppDeploy",
+    "appService.deploySubpath": "dist\\AngularLabProject"
+}
