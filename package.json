@@ -1,9 +1,9 @@
 {
-  "name": "angular-heroku",
+  "name": "angular-lab-project",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
